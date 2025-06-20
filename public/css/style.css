@@ -24117,4 +24117,9 @@ span.designation {
     100% { transform: translateX(-50%); }
 }
 
+.logo-img {
+  height: auto;
+  width: 180px;
+}
+
 
