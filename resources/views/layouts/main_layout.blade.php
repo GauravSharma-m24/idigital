@@ -98,7 +98,7 @@
 
                         <!-- Header Logo Start -->
                         <div class="header-logo">
-                            
+                            <img src="{{asset('images/logo.png')}}" alt="logo" class="logo-img">
                         </div>
                         <!-- Header Logo End -->
 
@@ -129,18 +129,6 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="#">More</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="{{ url('/#blogs') }}">Our Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ url('/#faq') }}">FAQs</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{ route('contactpage') }}">Contact</a></li>
                             </ul>
 
                         </div>
@@ -202,7 +190,7 @@
 
             <!-- Mobile Menu Start -->
             <div class="mobile-menu-items">
-               <ul class="nav-menu">
+                <ul class="nav-menu">
                                 <li><a href="{{ route('homepage') }}">Home</a></li>
                                 <li>
                                     <a href="{{route('coursepage')}}">Our Courses</a>
@@ -238,8 +226,9 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li><a href="{{ route('contactpage') }}">Contact</a></li>
+                                
                             </ul>
+
             </div>
             <!-- Mobile Menu End -->
 
@@ -312,15 +301,15 @@
 
                                 <!-- Footer Widget Start -->
                                 <div class="footer-widget">
-                                    <h4 class="footer-widget-title">Category</h4>
+                                    <h4 class="footer-widget-title">Useful Links</h4>
 
                                     <ul class="widget-link">
-                                        <li><a href="#">Creative Writing</a></li>
-                                        <li><a href="#">Film & Video</a></li>
-                                        <li><a href="#">Graphic Design</a></li>
-                                        <li><a href="#">UI/UX Design</a></li>
-                                        <li><a href="#">Business Analytics</a></li>
-                                        <li><a href="#">Marketing</a></li>
+                                        <li>
+                                            <a href="{{ url('/#blogs') }}">Our Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url('/#faq') }}">FAQs</a>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -331,10 +320,10 @@
                                     <h4 class="footer-widget-title">Quick Links</h4>
 
                                     <ul class="widget-link">
+                                        <li><a href="{{ route('contactpage') }}">Contact</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
                                         <li><a href="#">Discussion</a></li>
                                         <li><a href="#">Terms & Conditions</a></li>
-                                        <li><a href="#">Customer Support</a></li>
                                         <li><a href="#">Course FAQ’s</a></li>
                                     </ul>
 
