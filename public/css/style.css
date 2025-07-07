@@ -24122,6 +24122,11 @@ span.designation {
   width: 180px;
 }
 
+.logo-img {
+  height: auto;
+  width: 180px;
+}
+
 /* Profile dropdown styles */
 .profile-dropdown {
     position: relative;
