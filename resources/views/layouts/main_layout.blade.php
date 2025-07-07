@@ -98,7 +98,7 @@
 
                         <!-- Header Logo Start -->
                         <div class="header-logo">
-                            
+                            <img src="{{asset('images/logo.png')}}" alt="logo" class="logo-img">
                         </div>
                         <!-- Header Logo End -->
 
@@ -129,31 +129,24 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="#">More</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="{{ url('/#blogs') }}">Our Blog</a>
-                                        </li>
-                                        <li>
-                                            <a href="{{ url('/#faq') }}">FAQs</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li><a href="{{ route('contactpage') }}">Contact</a></li>
                             </ul>
 
                         </div>
                         <!-- Header Menu End -->
 
-                        <!-- Header Sing In & Up Start -->
+                        <!-- Header Sign In & Up Start -->
                         <div class="header-sign-in-up d-none d-lg-block">
                             <ul>
-                                <li><a class="sign-in" href="{{ route('login') }}">Sign In</a></li>
-                                <li><a class="sign-up" href="{{ route('register') }}">Sign Up</a></li>
+                                @if(session()->has('user'))
+                                    <li><a class="sign-up" href="{{route('dashboard')}}">Dashboard</a></li>
+                                    
+                                @else
+                                    <li><a class="sign-in" href="{{ route('loginpage') }}">Sign In</a></li>
+                                    <li><a class="sign-up" href="{{ route('registerpage') }}">Sign Up</a></li>
+                                @endif
                             </ul>
                         </div>
-                        <!-- Header Sing In & Up End -->
+                        <!-- Header Sign In & Up End -->
 
                         <!-- Header Mobile Toggle Start -->
                         <div class="header-toggle d-lg-none">
@@ -203,54 +196,43 @@
             <!-- Mobile Menu Start -->
             <div class="mobile-menu-items">
                 <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li>
-                        <a href="#">All Course</a>
-                        <ul class="sub-menu">
-                            <li><a href="courses.html">Courses</a></li>
-                            <li><a href="courses-details.html">Courses Details</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Pages </a>
-                        <ul class="sub-menu">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="register.html">Register</a></li>
-                            <li><a href="login.html">Login</a></li>
-                            <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="404-error.html">404 Error</a></li>
-                            <li><a href="after-enroll.html">After Enroll</a></li>
-                            <li><a href="courses-admin.html">Instructor Dashboard (Course List)</a></li>
-                            <li><a href="overview.html">Instructor Dashboard (Performance)</a></li>
-                            <li><a href="students.html">Students</a></li>
-                            <li><a href="reviews.html">Reviews</a></li>
-                            <li><a href="engagement.html">Course engagement</a></li>
-                            <li><a href="traffic-conversion.html">Traffic & conversion</a></li>
-                            <li><a href="messages.html">Messages</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Blog</a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#">Blog</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-grid.html">Blog</a></li>
-                                    <li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
-                                    <li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#">Blog Details</a>
-                                <ul class="sub-menu">
-                                    <li><a href="blog-details-left-sidebar.html">Blog Details Left Sidebar</a></li>
-                                    <li><a href="blog-details-right-sidebar.html">Blog Details Right Sidebar</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
+                                <li><a href="{{ route('homepage') }}">Home</a></li>
+                                <li>
+                                    <a href="{{route('coursepage')}}">Our Courses</a>
+                                </li>
+                                <li>
+                                    <a href="{{ route('aboutpage') }}">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Packages</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{ route('pro_package') }}">Pro</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('supreme_package') }}">Supreme</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('premium_package') }}">Premium</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ route('plus_package') }}">Premium Plus</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">More</a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a href="{{ url('/#blogs') }}">Our Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url('/#faq') }}">FAQs</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
 
             </div>
             <!-- Mobile Menu End -->
@@ -324,15 +306,15 @@
 
                                 <!-- Footer Widget Start -->
                                 <div class="footer-widget">
-                                    <h4 class="footer-widget-title">Category</h4>
+                                    <h4 class="footer-widget-title">Useful Links</h4>
 
                                     <ul class="widget-link">
-                                        <li><a href="#">Creative Writing</a></li>
-                                        <li><a href="#">Film & Video</a></li>
-                                        <li><a href="#">Graphic Design</a></li>
-                                        <li><a href="#">UI/UX Design</a></li>
-                                        <li><a href="#">Business Analytics</a></li>
-                                        <li><a href="#">Marketing</a></li>
+                                        <li>
+                                            <a href="{{ url('/#blogs') }}">Our Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="{{ url('/#faq') }}">FAQs</a>
+                                        </li>
                                     </ul>
 
                                 </div>
@@ -343,10 +325,10 @@
                                     <h4 class="footer-widget-title">Quick Links</h4>
 
                                     <ul class="widget-link">
+                                        <li><a href="{{ route('contactpage') }}">Contact</a></li>
                                         <li><a href="#">Privacy Policy</a></li>
                                         <li><a href="#">Discussion</a></li>
                                         <li><a href="#">Terms & Conditions</a></li>
-                                        <li><a href="#">Customer Support</a></li>
                                         <li><a href="#">Course FAQ’s</a></li>
                                     </ul>
 

@@ -24117,4 +24117,189 @@ span.designation {
     100% { transform: translateX(-50%); }
 }
 
+.logo-img {
+  height: auto;
+  width: 180px;
+}
+
+/* Profile dropdown styles */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+}
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.profile-button:hover .profile-image {
+    transform: scale(1.1);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-menu form {
+    margin: 0;
+}
+
+/* Add a divider between regular links and logout */
+.dropdown-menu a:not(form a) {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Mobile Profile Dropdown - Pure CSS Solution */
+.mobile-profile-dropdown {
+    width: 100%;
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.mobile-profile-toggle {
+    display: none;
+}
+
+.mobile-profile-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+.mobile-profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-profile-text {
+    font-weight: 600;
+    color: #333;
+    flex-grow: 1;
+}
+
+.mobile-dropdown-icon {
+    transition: transform 0.3s;
+}
+
+.mobile-dropdown-menu {
+    display: none;
+    padding: 10px 0 10px 60px;
+    background-color: #f9f9f9;
+    margin-top: 10px;
+}
+
+.mobile-profile-toggle:checked ~ .mobile-dropdown-menu {
+    display: block;
+}
+
+.mobile-profile-toggle:checked + .mobile-profile-button .mobile-dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 0;
+    color: #333;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #007bff;
+}
+
+.mobile-dropdown-menu form {
+    margin: 0;
+}
+
+.mobile-dropdown-menu a:not(form a) {
+    border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+    .certificate-wrapper {
+        min-height: 90vh;
+    }
+    
+    .certificate-wrapper h1 {
+        font-size: 2rem !important;
+    }
+    
+    .certificate-wrapper h2 {
+        font-size: 1.5rem !important;
+    }                     
+    
+    .shadow-primary-hover {
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(13, 110, 253, 0.2);
+    }
+    .shadow-primary-hover:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+    }
+    .btn-outline-secondary:hover {
+        background-color: #f8f9fa;
+    }
+
+    .hover-effect {
+        transition: all 0.2s ease;
+    }
+    .hover-effect:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 6px rgba(13, 110, 253, 0.25);
+    }
+    .btn-sm {
+        font-size: 0.825rem;
+        line-height: 1.2;
+    }
+                        
+}
 

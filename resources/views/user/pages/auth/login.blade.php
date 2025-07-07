@@ -75,20 +75,28 @@
                                 <h3 class="title">Login <span>Now</span></h3>
 
                                 <div class="form-wrapper">
-                                    <form action="#">
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            @foreach ($errors->all() as $error)
+                                                <p>{{ $error }}</p>
+                                            @endforeach
+                                        </div>
+                                    @endif
+                                    <form action="{{route('login')}}" method="post">
+                                        @csrf
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="email" placeholder="Username or Email">
+                                            <input type="email" placeholder="Username or Email" name="email">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="password" placeholder="Password">
+                                            <input type="password" placeholder="Password" name="password">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <button class="btn btn-primary btn-hover-dark w-100">Login</button>
+                                            <button class="btn btn-primary btn-hover-dark w-100" type="submit">Login</button>
                                             <a class="btn btn-secondary btn-outline w-100" href="#">Login with Google</a>
                                         </div>
                                         <!-- Single Form End -->

@@ -76,30 +76,40 @@
                                 <h3 class="title">Registration <span>Now</span></h3>
 
                                 <div class="form-wrapper">
-                                    <form action="#">
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
+                                    <form action="{{ route('register') }}" method="post">
+                                        @csrf
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="text" placeholder="Name">
+                                            <input type="text" placeholder="Name" name="name">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="email" placeholder="Email">
+                                            <input type="email" placeholder="Email" name="email">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="password" placeholder="Password">
+                                            <input type="password" placeholder="Password" name="password">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <input type="password" placeholder="Confirm Password">
+                                            <input type="password" placeholder="Confirm Password" name="password_confirmation">
                                         </div>
                                         <!-- Single Form End -->
                                         <!-- Single Form Start -->
                                         <div class="single-form">
-                                            <button class="btn btn-primary btn-hover-dark w-100">Create an account</button>
+                                            <button class="btn btn-primary btn-hover-dark w-100" type="submit">Create an account</button>
                                             <a class="btn btn-secondary btn-outline w-100" href="#">Sign up with Google</a>
                                         </div>
                                         <!-- Single Form End -->

@@ -52,7 +52,7 @@
 
                 <!-- Contact Map Wrapper Start -->
                 <div class="contact-map-wrapper">
-                    <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=Mission%20District%2C%20San%20Francisco%2C%20CA%2C%20USA&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                    <iframe id="gmap_canvas" src="//maps.google.com/maps?q=!4m10!1m2!2m1!1sIshram+Signature,+First+Floor,+Plot+No-5,+Pocket+-+B10,+Opp+UP+Guest+House,+Sector+13+Dwarka,+South+West+Delhi,+New+Delhi,+India,+110078&output=embed"></iframe>
                 </div>
                 <!-- Contact Map Wrapper End -->
 
@@ -81,7 +81,7 @@
                                     </div>
                                     <div class="info-content">
                                         <h6 class="title">Phone No.</h6>
-                                        <p><a href="tel:88193326867">(88) 193 326 867</a></p>
+                                        <p><a href="tel:9625136861">+91-9625136861</a></p>
                                     </div>
                                 </div>
                                 <!-- Single Contact Info End -->
@@ -92,7 +92,7 @@
                                     </div>
                                     <div class="info-content">
                                         <h6 class="title">Email Address.</h6>
-                                        <p><a href="mailto:edule100@gmail.com">edule100@gmail.com</a></p>
+                                        <p><a href="mailto:support@idigitalpreneur.com">support@idigitalpreneur.com</a></p>
                                     </div>
                                 </div>
                                 <!-- Single Contact Info End -->
@@ -103,7 +103,7 @@
                                     </div>
                                     <div class="info-content">
                                         <h6 class="title">Office Address.</h6>
-                                        <p>Talga, Alabama, USA</p>
+                                        <p>Ishram Signature, First Floor, Plot No-5, Pocket - B10, Opp UP Guest House, Sector 13 Dwarka, South West Delhi, New Delhi, India, 110078.</p>
                                     </div>
                                 </div>
                                 <!-- Single Contact Info End -->
