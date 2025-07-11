@@ -6,10 +6,13 @@ use App\Http\Controllers\ContentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Middleware\CheckUser;
 
 Route::get('/', function () {
     return view('user.pages.index');
 });
+
+
 
 Route::get('home', [HomeController::class, 'index'])->name('homepage');
 
@@ -38,7 +41,11 @@ Route::post('login', [AuthController::class, 'login'])->name('login');
 
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
+// Middleware Route
+Route::middleware(CheckUser::class)->group(function () {
+    Route::get('/dashboard', [UserController::class, 'dashboard'])->name('dashboard');
+});
+
 Route::get('/my-profile', [UserController::class, 'userProfile'])->name('user_profile');
 Route::get('/certificate', [UserController::class, 'certificate'])->name('certificate');
 Route::get('/affiliate_panel', [UserController::class, 'affiliatePanel'])->name('affiliate_panel');
